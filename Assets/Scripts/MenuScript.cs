@@ -7,6 +7,7 @@ public class MenuScript : MonoBehaviour {
     }
 
     public void Restart() {
-        SceneManager.LoadScene("Gameplay");
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthManager>().Reset();
+        GameObject.FindGameObjectWithTag("Enemy").GetComponent<HealthManager>().Reset();
     }
 }
